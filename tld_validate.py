@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import argparse
-import os
 from colorama import Fore, Style
 from tabulate import tabulate
 
