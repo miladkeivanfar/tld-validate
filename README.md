@@ -27,7 +27,7 @@ This is a Python script that validates a list of domains against a set of valid 
 options:
   -h, --help            show this help message and exit
   -df DOMAINS, --domains     domains file
-  -tf VALIDTLD, --validtld   valid TLD file (default valid_tld.txt )
+  -tf VALIDTLD, --validtld   valid TLD file (default valid_tld.txt from SecLists )
   -in, --invaliddomains      invalid domains list in result
   -s, --silent               silent report
 ```
