@@ -39,13 +39,13 @@ def main():
 
     args = parser.parse_args()
 
-    if not os.path.isfile(args.domains):
-        print("Error: an input file not exist or is not readable.")
-        return
-
     try:
-        with open(args.domains, "r") as file:
-            domains = [domain.strip() for domain in file.readlines()]
+        if args.domains:
+            with open(args.domains, "r") as file:
+                domains = [domain.strip() for domain in file.readlines()]
+        else:
+            print("Error: Domain file Does not exist or is not readable.")
+
         if args.validtld:
             with open(args.validtld, "r") as file:
                 valid_tlds = [tld.strip() for tld in file.readlines()]
