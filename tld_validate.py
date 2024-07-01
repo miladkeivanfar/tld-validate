@@ -39,8 +39,8 @@ def main():
 
     args = parser.parse_args()
     
-    if not os.path.isfile(args.domains) or not os.path.isfile(args.validtld):
-        print("Error: One or more input files do not exist or are not readable.")
+    if not os.path.isfile(args.domains):
+        print("Error: an input file not exist or is not readable.")
         return
     
     try:
