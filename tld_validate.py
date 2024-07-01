@@ -46,9 +46,12 @@ def main():
     try:
         with open(args.domains, "r") as file:
             domains = [domain.strip() for domain in file.readlines()]
-        
-        with open(args.validtld, "r") as file:
-            valid_tlds = [tld.strip() for tld in file.readlines()]
+        if args.validtld:
+            with open(args.validtld, "r") as file:
+                valid_tlds = [tld.strip() for tld in file.readlines()]
+        else:
+            with open("valid_tld.txt", "r") as file:
+                valid_tlds = [tld.strip() for tld in file.readlines()]           
         
         valid_domains, invalid_domains = validate_domains(domains, valid_tlds)
         
