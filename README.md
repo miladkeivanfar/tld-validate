@@ -16,9 +16,9 @@ This is a Python script that validates a list of domains against a set of valid 
 
 2. Install the required dependencies:
 
-`pip install -r requirements.txt`
+`pip3 install -r requirements.txt`
 
-3- Run the script with the necessary arguments:
+3. Run the script with the necessary arguments:
 
 `python3 tld_validation.py -df domains.txt`
 
