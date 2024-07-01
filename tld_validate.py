@@ -38,11 +38,11 @@ def main():
     parser.add_argument("-s", "--silent", help="silent report",action="store_true", required=False)
 
     args = parser.parse_args()
-    
+
     if not os.path.isfile(args.domains):
         print("Error: an input file not exist or is not readable.")
         return
-    
+
     try:
         with open(args.domains, "r") as file:
             domains = [domain.strip() for domain in file.readlines()]
@@ -52,9 +52,9 @@ def main():
         else:
             with open("valid_tld.txt", "r") as file:
                 valid_tlds = [tld.strip() for tld in file.readlines()]           
-        
+
         valid_domains, invalid_domains = validate_domains(domains, valid_tlds)
-        
+
         if args.invaliddomains:
             for domain in invalid_domains:
                 print(f"{domain}")
