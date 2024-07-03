@@ -41,7 +41,7 @@ def main():
     parser.add_argument("-df", "--domains", help="domains file", required=True)
     parser.add_argument("-tf", "--validtld", help="valid TLD file", required=False)
     parser.add_argument("-in", "--invaliddomains", help="invalid domains list in result",action="store_true", required=False)
-    parser.add_argument("-ex", "--exclude", help="exclude tld", required=False)
+    parser.add_argument("-ex", "--exclude", help="exclude tld (.tld1,.tld2,...)", required=False)
     parser.add_argument("-s", "--silent", help="silent report", action="store_true", required=False)
 
 
