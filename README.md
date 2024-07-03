@@ -29,7 +29,7 @@ options:
   -df DOMAINS, --domains     domains file
   -tf VALIDTLD, --validtld   valid TLD file (default valid_tld.txt from SecLists )
   -in, --invaliddomains      invalid domains list in result
-  -ex EXCLUDE, --exclude EXCLUDE  exclude tld
+  -ex EXCLUDE, --exclude EXCLUDE  exclude tld (.tld1,.tld2,...)
   -s, --silent               silent report
 ```
 
